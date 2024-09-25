@@ -29,7 +29,7 @@ app.get("/users", async (req, res) => {
 
 /**==============================Login validation========================= */
 
-app.get("/login", async (req, res) => {
+app.post("/login", async (req, res) => {
   try {
     const {username, password} = req.body;
     const isLoggedIn = await validateLogin(username, password);

@@ -20,7 +20,7 @@ const validateLogin = async (uname, pwd) => {
     const documents = await userList.findOne({userName: uname});
     if(documents){
         if(documents.password === pwd){
-            return "Login Successful";
+            return documents;
         }else{
             return "Invalid Password";
         }
