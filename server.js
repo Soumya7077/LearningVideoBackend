@@ -1,7 +1,12 @@
 var express = require("express");
 var cors = require("cors");
-const { getUser, validateLogin } = require("./controller/userController");
+const {
+  getUser,
+  validateLogin,
+  registerUser,
+} = require("./controller/userController");
 const { getCourseList } = require("./controller/courseController");
+const { connectDatabase } = require("./dbconfig");
 require("dotenv").config();
 
 var app = express();
@@ -15,47 +20,31 @@ app.use(
 
 app.use(express.json());
 
+connectDatabase();
+
 /** =====================Get All user data ================================*/
 
-app.get("/users", async (req, res) => {
-  try {
-    const users = await getUser();
-    res.send(users);
-  } catch (err) {
-    res.status(500).json({ error: "Error fetching users" });
-  }
-});
+app.get("/users", getUser);
 
 /** =====================Get All user data ================================*/
 
 /**==============================Login validation========================= */
 
-app.post("/login", async (req, res) => {
-  try {
-    const {username, password} = req.body;
-    const isLoggedIn = await validateLogin(username, password);
-    res.send(isLoggedIn);
-  } catch (err) {
-    res.status(500).json({ error: "Error in login" });
-  }
-});
+app.post("/login", validateLogin);
 
 /**==============================Login validation========================= */
 
-/**==============================Get All Courses======================== */
+/**================================Register user========================== */
 
-app.get('/courseList', async(req, res) => {
-  const {limit} = req.query;
-  try{
-    const courselist = await getCourseList(limit);
-    res.send(courselist);
-  }catch(err){
-    res.status(500).json({ err: "Error fetching course list" });
-  }
-});
+app.post("/signup", registerUser);
+
+/**================================Register user========================== */
 
 /**==============================Get All Courses======================== */
 
+app.get("/courseList", getCourseList);
+
+/**==============================Get All Courses======================== */
 
 app.listen(process.env.appPort);
 console.log(`Server Started : http://127.0.0.1:8080`);

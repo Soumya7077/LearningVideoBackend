@@ -1,19 +1,16 @@
 require("dotenv").config();
 
-var mongoClient = require("mongodb").MongoClient;
+var mongoose = require("mongoose");
 
 const connectDatabase = async () => {
   try {
-    const client = await mongoClient.connect(process.env.connectionString);
-
-    console.log(`Connected to MongoDB database successfully.`);
-
-    const database = client.db("learning_video");
-    return database;
+    await mongoose.connect(process.env.MONGO_URI).then(() => {
+      console.log("Db connected");
+    });
   } catch (err) {
     console.log("Error in db connection", err);
     throw err;
   }
 };
 
-module.exports = connectDatabase;
+module.exports = {connectDatabase};

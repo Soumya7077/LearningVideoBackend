@@ -1,13 +1,15 @@
-const connectDatabase = require("../dbconfig");
 
-const userModel = async () => {
-  try {
-    const connectDb = await connectDatabase();
-    const usercollection = connectDb.collection("users");
-    return usercollection;
-  } catch (err) {
-    console.log("Error in user model", err);
-  }
-};
+const mongoose = require('mongoose');
+
+const userSchema = new mongoose.Schema({
+    name: {type: String, required: true},
+    email: {type: String, required: true, unique: true},
+    password: {type: String, required: true},
+    userType: {type: Number, required: true},
+    isActive: {type: Number, required: true}
+});
+
+const userModel = mongoose.model("users", userSchema);
+
 
 module.exports = userModel;
