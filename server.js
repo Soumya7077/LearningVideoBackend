@@ -7,6 +7,7 @@ const {
 } = require("./controller/userController");
 const { getCourseList } = require("./controller/courseController");
 const { connectDatabase } = require("./dbconfig");
+const { getNotice } = require("./controller/noticeController");
 require("dotenv").config();
 
 var app = express();
@@ -45,6 +46,12 @@ app.post("/signup", registerUser);
 app.get("/courseList", getCourseList);
 
 /**==============================Get All Courses======================== */
+
+/**===============================Get All Notice========================== */
+
+app.get("/noticelist", getNotice);
+
+/**===============================Get All Notice========================== */
 
 app.listen(process.env.appPort);
 console.log(`Server Started : http://127.0.0.1:8080`);

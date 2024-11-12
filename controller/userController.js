@@ -1,3 +1,4 @@
+
 const userModel = require("../model/userModel");
 
 /**=============================Get All user list====================== */
@@ -44,7 +45,14 @@ const validateLogin = async (req, res) => {
 /**================================Sign up user========================= */
 
     const registerUser = async(req, res) => {
-        const {name, email, userType, password, isActive} = req.body;
+        const {name, email, userType, password} = req.body;
+        const user = {
+          name: name,
+          email: email,
+          userType: userType,
+          password: password,
+          isActive:1
+        }
 
         try{
             const isUserExist = await userModel.findOne({email:email});
