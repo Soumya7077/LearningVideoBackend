@@ -4,8 +4,9 @@ const {
   getUser,
   validateLogin,
   registerUser,
+  updateUser,
 } = require("./controller/userController");
-const { getCourseList } = require("./controller/courseController");
+const { getCourseList, getCoursePdfUrl } = require("./controller/courseController");
 const { connectDatabase } = require("./dbconfig");
 const { getNotice } = require("./controller/noticeController");
 require("dotenv").config();
@@ -52,6 +53,19 @@ app.get("/courseList", getCourseList);
 app.get("/noticelist", getNotice);
 
 /**===============================Get All Notice========================== */
+
+/**===============================Get pdf  of course=================== */
+
+  app.get('/getcoursepdf/:id', getCoursePdfUrl);
+
+/**===============================Get pdf  of course=================== */
+
+/**=============================Update User============================ */
+
+  app.put('/updateuser/:id', updateUser);
+
+/**=============================Update User============================ */
+
 
 app.listen(process.env.appPort);
 console.log(`Server Started : http://127.0.0.1:8080`);

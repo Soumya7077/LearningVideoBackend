@@ -5,7 +5,7 @@ const courseSectionSchema = new mongoose.Schema({
     sectionDesc: {type: String, required: true},
     sectionStartTime: {type: String, required: true},
     sectionEndTime: {type: String, required: true}
-});
+}, { collection: 'courseSection' });
 
 const courseSectionModel = mongoose.model("courseSection", courseSectionSchema);
 

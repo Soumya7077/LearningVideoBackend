@@ -7,7 +7,7 @@ const courseDetailsSchema = new mongoose.Schema({
     lengthInHrs: {type: String, required: true},
     courseSectionIds: {type: Array, required: true},
     subjectIds: {type: Array, required: true},
-});
+}, { collection: 'coursedetails' });
 
 const courseDetailsModel = mongoose.model("coursedetails", courseDetailsSchema);
 

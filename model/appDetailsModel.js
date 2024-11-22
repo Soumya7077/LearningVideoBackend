@@ -7,7 +7,7 @@ const appDetailsSchema = new mongoose.Schema({
     thumbnailUrl: {type: String, required: true},
     appColor: {type: String, required: true},
     noticeIds: {type: Array, required: true}
-});
+}, { collection: 'appDetails' });
 
 const appDetailsModel = mongoose.model("appDetails", appDetailsSchema);
 

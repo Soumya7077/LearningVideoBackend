@@ -9,7 +9,7 @@ const courseSchema = new mongoose.Schema({
     courseDesc: {type: String, required: true},
     isActive: {type: Number, required: true},
     courseImage: {type: String, required: true},
-});
+}, { collection: 'courses' });
 
 const courseModel = mongoose.model("courses", courseSchema);
 

@@ -7,7 +7,7 @@ const noticeSchema = new mongoose.Schema({
   startDate: { type: Date, required: true },
   endDate: { type: Date, required: true },
   isActive: { type: Number, required: true },
-}); 
+}, { collection: 'notices' }); 
 
 const noticeModel = mongoose.model("notices", noticeSchema);
 

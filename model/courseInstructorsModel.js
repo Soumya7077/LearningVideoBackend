@@ -5,7 +5,7 @@ const courseInstructorSchema = new mongoose.Schema({
     instructorQualification: {type: Array, required: true},
     aboutInstructor: {type: String, required: true},
     profilePhoto: {type: String, required: true}
-});
+}, { collection: 'courseInstructor' });
 
 const courseInstructorModel = mongoose.model("courseInstructor", courseInstructorSchema);
 
