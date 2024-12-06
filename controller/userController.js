@@ -20,6 +20,29 @@ const getUser = async (req, res) => {
 
 /**=============================Get All user list====================== */
 
+
+/**===============================Get User by id========================== */
+
+const getUserById = async(req, res)=> {
+  const {userId} = req.params;
+  try{
+    const user = await userModel.findById({_id: userId.trim()})
+    const userDetails = await userDetailsModel.findOne({
+      userId: userId.trim(),
+    });
+    res.status(200).json({
+      user: user,
+      userDetails: userDetails,
+      message: "Data fetch successfully"
+    });
+  }catch(err){
+    res.status(400).json({ error: "User not found" });
+  }
+}
+
+
+/**===============================Get User by id========================== */
+
 /**================================Login validation===================== */
 
 const validateLogin = async (req, res) => {
@@ -153,4 +176,4 @@ const storeLoggedInUserData = async(userId) => {
 
 /**======================================Store Logged In User Data =================== */
 
-module.exports = { getUser, validateLogin, registerUser, updateUser };
+module.exports = { getUser, validateLogin, registerUser, updateUser, getUserById };
