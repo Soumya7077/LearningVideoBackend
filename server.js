@@ -9,7 +9,7 @@ const {
   updateUser,
   getUserById,
 } = require("./controller/userController");
-const { getCourseList, getCoursePdfUrl, addFavouriteCourse, getFavouriteCourseList } = require("./controller/courseController");
+const { getCourseList, getCoursePdfUrl, addFavouriteCourse, getFavouriteCourseList, getPaidCourseList } = require("./controller/courseController");
 const { connectDatabase } = require("./dbconfig");
 const { getNotice } = require("./controller/noticeController");
 require("dotenv").config();
@@ -225,6 +225,28 @@ app.put('/updatefavcourse/:userId', addFavouriteCourse);
  *         description: Favourite course list retrieved
  */
 app.get('/getfavcourse/:userId', getFavouriteCourseList);
+
+/**======================Get favourite course list by id=============================== */
+
+
+/**======================Get favourite course list by id=============================== */
+/**
+ * @swagger
+ * /getpaidcourse/{userId}:
+ *   get:
+ *     summary: Retrieve a user's favourite course list by ID
+ *     parameters:
+ *       - in: path
+ *         name: userId
+ *         required: true
+ *         description: User ID
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Paid course list retrieved
+ */
+app.get('/getpaidcourse/:userId', getPaidCourseList);
 
 /**======================Get favourite course list by id=============================== */
 

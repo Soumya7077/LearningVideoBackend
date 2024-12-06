@@ -11,6 +11,7 @@ const courseSchema = new mongoose.Schema(
     courseImage: { type: String, required: true },
     courseType: { type: String, required: true },
     courseExpiresOn: { type: String, required: true },
+    courseDuration: { type: Number, required: true },
   },
   { collection: "courses" }
 );

@@ -2,6 +2,7 @@ const courseContentModel = require("../model/courseContentModel");
 const courseModel = require("../model/courseModel");
 const mongoose = require("mongoose");
 const userModel = require("../model/userModel");
+const userCourseModel = require("../model/userCourseModel");
 
 /**======================Get All Courses======================= */
 
@@ -98,9 +99,47 @@ const getFavouriteCourseList = async (req, res) => {
 
 /**=============================Get favourite course list ============= */
 
+/**=============================Get paid course list ============= */
+
+const getPaidCourseList = async (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const getPaidCourses = await userCourseModel.find({
+      userId: new mongoose.Types.ObjectId(userId),
+    });
+
+    const courseList = [];
+
+    for (const paidCourse of getPaidCourses) {
+      const course = await courseModel.findById(paidCourse.courseId);
+
+      if (course) {
+        const purchaseDate = new Date(paidCourse.purchaseDate);
+        const expiryDate = new Date(purchaseDate);
+        expiryDate.setDate(expiryDate.getDate() + course.courseDuration);
+
+        courseList.push({
+          ...paidCourse._doc,
+          ...course._doc,
+          expiryDate,
+        });
+      }
+    }
+
+    res.status(200).send(courseList);
+  } catch (error) {
+    console.error("Error fetching paid courses:", error);
+    res.status(500).send({ message: "Failed to fetch courses" });
+  }
+};
+
+/**=============================Get paid course list ============= */
+
 module.exports = {
   getCoursePdfUrl,
   getCourseList,
   addFavouriteCourse,
   getFavouriteCourseList,
+  getPaidCourseList,
 };
