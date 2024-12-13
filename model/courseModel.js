@@ -10,7 +10,7 @@ const courseSchema = new mongoose.Schema(
     isActive: { type: Number, required: true },
     courseImage: { type: String, required: true },
     courseType: { type: String, required: true },
-    courseExpiresOn: { type: String, required: true },
+    // courseExpiresOn: { type: String, required: true },
     courseDuration: { type: Number, required: true },
   },
   { collection: "courses" }
