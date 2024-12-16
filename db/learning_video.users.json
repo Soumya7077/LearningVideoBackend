@@ -1,20 +1,92 @@
 [{
   "_id": {
-    "$oid": "66f159dafe71192d665c8733"
+    "$oid": "673c88137671d725928cfebc"
   },
-  "name": "Soumya",
-  "userName": "soumya12",
-  "password": "Soumya@12",
+  "name": "Soumya Ranjan Behera",
+  "email": "soumya05ranjan@gmail.com",
+  "password": "Soumya12",
   "userType": 1,
-  "isActive": 1
+  "courseIds": [],
+  "favouriteCourseIds": [
+    "66fba9fefd644d47f4f135bc"
+  ],
+  "isActive": 1,
+  "phone": "6372118561",
+  "__v": 56
 },
 {
   "_id": {
-    "$oid": "66f1901cfe71192d665c8737"
+    "$oid": "673c88367671d725928cfebe"
   },
-  "name": "MsDhoni",
-  "userName": "mahi07",
-  "password": "Mahi@07",
-  "userType": 2,
-  "isActive": 1
+  "name": "Mahendra Singh Dhoni",
+  "email": "msd07@gmail.com",
+  "password": "Dhoni@07",
+  "userType": 1,
+  "courseIds": [],
+  "favouriteCourseIds": [],
+  "isActive": 1,
+  "phone": "9876543210",
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "673c88637671d725928cfec0"
+  },
+  "name": "Virat Kohli",
+  "email": "virat@gmail.com",
+  "password": "Virat18",
+  "userType": 1,
+  "courseIds": [],
+  "favouriteCourseIds": [],
+  "isActive": 1,
+  "phone": "9877665544"
+},
+{
+  "_id": {
+    "$oid": "67586501c8c08af7a3a7f46c"
+  },
+  "name": "Amiya Ranjan",
+  "email": "srb0963@gmail.com",
+  "password": "Amiya12",
+  "userType": 1,
+  "courseIds": [],
+  "favouriteCourseIds": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675d15283217abb2de6d9327"
+  },
+  "name": "Manas Nayak",
+  "email": "manas2nayak@gmail.com",
+  "password": "manas2nayak",
+  "userType": 1,
+  "courseIds": [],
+  "favouriteCourseIds": [],
+  "__v": 0,
+  "phone": "Trs"
+},
+{
+  "_id": {
+    "$oid": "675d31cacd18479eb5ee2770"
+  },
+  "name": "Paridhi",
+  "email": "abc@gmail.com ",
+  "password": "123456",
+  "userType": 1,
+  "courseIds": [],
+  "favouriteCourseIds": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675d32aecd18479eb5ee2777"
+  },
+  "name": "First User",
+  "email": "f1@g.com",
+  "password": "f1@g.com",
+  "userType": 1,
+  "courseIds": [],
+  "favouriteCourseIds": [],
+  "__v": 0
 }]

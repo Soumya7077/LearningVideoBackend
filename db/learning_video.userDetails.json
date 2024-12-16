@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "673c895c7671d725928cfec8"
+  },
+  "userId": {
+    "$oid": "673c88137671d725928cfebc"
+  },
+  "displayName": "Soumya Ranjan Behera",
+  "dob": "27-05-2000",
+  "qualificationIds": [],
+  "subjectIds": [],
+  "isActive": 1
+},
+{
+  "_id": {
+    "$oid": "673c89ac7671d725928cfeca"
+  },
+  "userId": {
+    "$oid": "673c88367671d725928cfebe"
+  },
+  "displayName": "Mahendra Singh Dhoni",
+  "dob": "07-07-1978",
+  "qualificationIds": [],
+  "subjectIds": [],
+  "isActive": 1
+},
+{
+  "_id": {
+    "$oid": "673c89ee7671d725928cfecc"
+  },
+  "userId": {
+    "$oid": "673c88637671d725928cfec0"
+  },
+  "displayName": "Virat Kohli",
+  "dob": "18-02-1989",
+  "qualificationIds": [],
+  "subjectIds": [],
+  "isActive": 1
+}]

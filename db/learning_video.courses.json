@@ -1,155 +1,255 @@
-[
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "Node Js",
-    "videourl": "Course-1.mkv",
-    "courseDesc": "Developers use Node. js to create server-side web applications, and it is perfect for data-intensive applications since it uses an asynchronous, event-driven model. Now that we know what is Node, let's look at why it is so prevalent in web development.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubuserchttps://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png"
+[{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135bb"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "Express Js",
-    "videourl": "Course-2.mkv",
-    "courseDesc": "Express.js is a small framework that works on top of Node.js web server functionality to simplify its APIs and add helpful new features.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/183859966-a3462d8d-1bc7-4880-b353-e2cbed900ed6.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "Express Js",
+  "videourl": "Course-2.mkv",
+  "courseDesc": "Express.js is a small framework that works on top of Node.js web server functionality to simplify its APIs and add helpful new features.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/183859966-a3462d8d-1bc7-4880-b353-e2cbed900ed6.png",
+  "courseType": 0,
+  "courseExpiresOn": "31-12-2099",
+  "courseDuration": 2000
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135be"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "Redux",
-    "videourl": "Course-3.mkv",
-    "courseDesc": "Redux allows you to manage your app's state in a single place and keep changes in your app more predictable and traceable, making it easier to understand the changes happening in your app. But all of these benefits come with a set of challenges.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/187896150-cc1dcb12-d490-445c-8e4d-1275cd2388d6.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "Python",
+  "videourl": "Course-5.mkv",
+  "courseDesc": "Python is commonly used for developing websites and software, task automation, data analysis, and data visualisation. Since it's relatively easy to learn, Python has been adopted by many non-programmers, such as accountants and scientists, for a variety of everyday tasks, like organising finances.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png",
+  "courseType": 0,
+  "courseExpiresOn": "31-12-2099",
+  "courseDuration": 2000
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135bf"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "Webpack",
-    "videourl": "Course-4.mkv",
-    "courseDesc": "Webpack in react is a JavaScript module bundler that is commonly used with React to bundle and manage dependencies. It takes all of the individual JavaScript files and other assets in a project, such as images and CSS, and combines them into a single bundle that can be loaded by the browser.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/187955008-981340e6-b4cc-441b-80cf-7a5e94d29e7e.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "PHP",
+  "videourl": "Course-6.mkv",
+  "courseDesc": "PHP is a server-side scripting language embedded in HTML in its simplest form. PHP allows web developers to create dynamic content and interact with databases. PHP is known for its simplicity, speed, and flexibility — features that have made it a cornerstone in the web development world.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/183570228-6a040b9f-3ddf-47a2-a201-743121dac664.png",
+  "courseType": 0,
+  "courseExpiresOn": "31-12-2099",
+  "courseDuration": 2000
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135c4"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "Python",
-    "videourl": "Course-5.mkv",
-    "courseDesc": "Python is commonly used for developing websites and software, task automation, data analysis, and data visualisation. Since it's relatively easy to learn, Python has been adopted by many non-programmers, such as accountants and scientists, for a variety of everyday tasks, like organising finances.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "Firebase",
+  "videourl": "Course-11.mkv",
+  "courseDesc": "Firebase provides detailed documentation and cross-platform app development SDKs, to help you build and ship apps for iOS, Android, the Web, Flutter, Unity, and C++.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/189716855-2c69ca7a-5149-4647-936d-780610911353.png",
+  "courseType": 0,
+  "courseExpiresOn": "31-12-2099",
+  "courseDuration": 2000
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135c5"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "PHP",
-    "videourl": "Course-6.mkv",
-    "courseDesc": "PHP is a server-side scripting language embedded in HTML in its simplest form. PHP allows web developers to create dynamic content and interact with databases. PHP is known for its simplicity, speed, and flexibility — features that have made it a cornerstone in the web development world.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/183570228-6a040b9f-3ddf-47a2-a201-743121dac664.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "MUI",
+  "videourl": "Course-12.mkv",
+  "courseDesc": "MUI is a massive library of UI components designers and developers can use to build React applications. The open-source project follows Google's guidelines for creating components, giving you a customizable library of foundational and advanced UI elements.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/189716630-fe6c084c-6c66-43af-aa49-64c8aea4a5c2.png",
+  "courseType": 0,
+  "courseExpiresOn": "31-12-2099",
+  "courseDuration": 2000
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135bc"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "Oracle",
-    "videourl": "Course-7.mkv",
-    "courseDesc": "Oracle is the most used relational database management system (RDBMS) today. An RDBMS is used by businesses to store and retrieve information. Oracle was the first database to use enterprise grid computing (EGC). Enterprise grid computing performs tasks using groups of computers connected by a network.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/117208736-bdedc080-adf5-11eb-912f-61c7d43705f6.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "Redux",
+  "videourl": "Course-3.mkv",
+  "courseDesc": "Redux allows you to manage your app's state in a single place and keep changes in your app more predictable and traceable, making it easier to understand the changes happening in your app. But all of these benefits come with a set of challenges.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/187896150-cc1dcb12-d490-445c-8e4d-1275cd2388d6.png",
+  "courseType": 0,
+  "courseExpiresOn": "31-12-2099",
+  "courseDuration": 2000
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135c2"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "HTML",
-    "videourl": "Course-8.mkv",
-    "courseDesc": "HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "CSS",
+  "videourl": "Course-9.mkv",
+  "courseDesc": "CSS is the acronym of “Cascading Style Sheets”. CSS is a computer language for laying out and structuring web pages (HTML or XML). This language contains coding elements and is composed of these “cascading style sheets” which are equally called CSS files",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png",
+  "courseType": 0,
+  "courseExpiresOn": "05-12-2024",
+  "courseDuration": 60
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135c0"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "CSS",
-    "videourl": "Course-9.mkv",
-    "courseDesc": "CSS is the acronym of “Cascading Style Sheets”. CSS is a computer language for laying out and structuring web pages (HTML or XML). This language contains coding elements and is composed of these “cascading style sheets” which are equally called CSS files",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "Oracle",
+  "videourl": "Course-7.mkv",
+  "courseDesc": "Oracle is the most used relational database management system (RDBMS) today. An RDBMS is used by businesses to store and retrieve information. Oracle was the first database to use enterprise grid computing (EGC). Enterprise grid computing performs tasks using groups of computers connected by a network.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/117208736-bdedc080-adf5-11eb-912f-61c7d43705f6.png",
+  "courseType": 0,
+  "courseExpiresOn": "15-12-2024",
+  "courseDuration": 200
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135c3"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "Bootstrap",
-    "videourl": "Course-10.mkv",
-    "courseDesc": "Bootstrap provides developers with a suite of HTML, CSS, and JavaScript files that contain reusable page elements, styles, and interactions. This means that building a website is much faster using Bootstrap than designing and coding common UI elements from scratch.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/183898054-b3d693d4-dafb-4808-a509-bab54cf5de34.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "Bootstrap",
+  "videourl": "Course-10.mkv",
+  "courseDesc": "Bootstrap provides developers with a suite of HTML, CSS, and JavaScript files that contain reusable page elements, styles, and interactions. This means that building a website is much faster using Bootstrap than designing and coding common UI elements from scratch.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/183898054-b3d693d4-dafb-4808-a509-bab54cf5de34.png",
+  "courseType": 0,
+  "courseExpiresOn": "10-12-2024",
+  "courseDuration": 30
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135c8"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "Firebase",
-    "videourl": "Course-11.mkv",
-    "courseDesc": "Firebase provides detailed documentation and cross-platform app development SDKs, to help you build and ship apps for iOS, Android, the Web, Flutter, Unity, and C++.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/189716855-2c69ca7a-5149-4647-936d-780610911353.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "Typescript",
+  "videourl": "Course-15.mkv",
+  "courseDesc": "TypeScript really shines when building complex, multi-page applications, and websites. Most developers won't use it for basic things like adding interactivity to single web pages, but will use it to build large applications with React or Angular.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/183890598-19a0ac2d-e88a-4005-a8df-1ee36782fde1.png",
+  "courseType": 0,
+  "courseExpiresOn": "31-12-2099",
+  "courseDuration": 2000
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135c9"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "MUI",
-    "videourl": "Course-12.mkv",
-    "courseDesc": "MUI is a massive library of UI components designers and developers can use to build React applications. The open-source project follows Google's guidelines for creating components, giving you a customizable library of foundational and advanced UI elements.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/189716630-fe6c084c-6c66-43af-aa49-64c8aea4a5c2.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "My SQL",
+  "videourl": "Course-16.mkv",
+  "courseDesc": "A relational database stores data in separate tables rather than putting all the data in one big storeroom. The database structure is organized into physical files optimized for speed.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/183896128-ec99105a-ec1a-4d85-b08b-1aa1620b2046.png",
+  "courseType": 0,
+  "courseExpiresOn": "10-12-2024",
+  "courseDuration": 70
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135ca"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "Javascript",
-    "videourl": "Course-13.mkv",
-    "courseDesc": "What Is JavaScript? JavaScript (JS) is a cross-platform, object-oriented programming language used by developers to make web pages interactive. It allows developers to create dynamically updating content, use animations, pop-up menus, clickable buttons, control multimedia, etc.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "Mongo DB",
+  "videourl": "Course-17.mkv",
+  "courseDesc": "MongoDB is built on a scale-out architecture that has become popular with developers of all kinds for developing scalable applications with evolving data schemas. As a document database, MongoDB makes it easy for developers to store structured or unstructured data. It uses a JSON-like format to store documents.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png",
+  "courseType": 0,
+  "courseExpiresOn": "31-12-2099",
+  "courseDuration": 2000
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135c6"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "React JS",
-    "videourl": "Course-14.mkv",
-    "courseDesc": "React is designed to create sophisticated user interfaces. It allows using HTML-like syntax within JavaScript code, enabling developers to create reusable components and write less code for UI implementation. React is widely used in web development due to the following features: Code Reusability.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "Javascript",
+  "videourl": "Course-13.mkv",
+  "courseDesc": "What Is JavaScript? JavaScript (JS) is a cross-platform, object-oriented programming language used by developers to make web pages interactive. It allows developers to create dynamically updating content, use animations, pop-up menus, clickable buttons, control multimedia, etc.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png",
+  "courseType": 0,
+  "courseExpiresOn": "05-12-2024",
+  "courseDuration": 100
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135bd"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "Typescript",
-    "videourl": "Course-15.mkv",
-    "courseDesc": "TypeScript really shines when building complex, multi-page applications, and websites. Most developers won't use it for basic things like adding interactivity to single web pages, but will use it to build large applications with React or Angular.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/183890598-19a0ac2d-e88a-4005-a8df-1ee36782fde1.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "Webpack",
+  "videourl": "Course-4.mkv",
+  "courseDesc": "Webpack in react is a JavaScript module bundler that is commonly used with React to bundle and manage dependencies. It takes all of the individual JavaScript files and other assets in a project, such as images and CSS, and combines them into a single bundle that can be loaded by the browser.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/187955008-981340e6-b4cc-441b-80cf-7a5e94d29e7e.png",
+  "courseType": 0,
+  "courseExpiresOn": "06-12-2024",
+  "courseDuration": 200
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135c1"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "My SQL",
-    "videourl": "Course-16.mkv",
-    "courseDesc": "A relational database stores data in separate tables rather than putting all the data in one big storeroom. The database structure is organized into physical files optimized for speed.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/183896128-ec99105a-ec1a-4d85-b08b-1aa1620b2046.png"
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "HTML",
+  "videourl": "Course-8.mkv",
+  "courseDesc": "HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png",
+  "courseType": 0,
+  "courseExpiresOn": "31-12-2099",
+  "courseDuration": 2000
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135ba"
   },
-  {
-    "categoryId": 1,
-    "subcategoryId": 1,
-    "courseName": "Mongo DB",
-    "videourl": "Course-17.mkv",
-    "courseDesc": "MongoDB is built on a scale-out architecture that has become popular with developers of all kinds for developing scalable applications with evolving data schemas. As a document database, MongoDB makes it easy for developers to store structured or unstructured data. It uses a JSON-like format to store documents.",
-    "isActive": 1,
-    "courseImage": "https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png"
-  }
-]
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "Node Js",
+  "videourl": "Course-1.mkv",
+  "courseDesc": "Developers use Node. js to create server-side web applications, and it is perfect for data-intensive applications since it uses an asynchronous, event-driven model. Now that we know what is Node, let's look at why it is so prevalent in web development.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png",
+  "courseType": 0,
+  "courseExpiresOn": "31-12-2099",
+  "courseDuration": 2000
+},
+{
+  "_id": {
+    "$oid": "66fba9fefd644d47f4f135c7"
+  },
+  "categoryId": 1,
+  "subcategoryId": 1,
+  "courseName": "React JS",
+  "videourl": "Course-14.mkv",
+  "courseDesc": "React is designed to create sophisticated user interfaces. It allows using HTML-like syntax within JavaScript code, enabling developers to create reusable components and write less code for UI implementation. React is widely used in web development due to the following features: Code Reusability.",
+  "isActive": 1,
+  "courseImage": "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png",
+  "courseType": 0,
+  "courseExpiresOn": "31-12-2099",
+  "courseDuration": 2000
+}]

@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "6752d65975425ccf7135c4ce"
+  },
+  "userId": {
+    "$oid": "673c88137671d725928cfebc"
+  },
+  "courseId": {
+    "$oid": "66fba9fefd644d47f4f135c2"
+  },
+  "purchaseDate": "2024-12-02"
+},
+{
+  "_id": {
+    "$oid": "6752d73375425ccf7135c4d1"
+  },
+  "userId": {
+    "$oid": "673c88137671d725928cfebc"
+  },
+  "courseId": {
+    "$oid": "66fba9fefd644d47f4f135c0"
+  },
+  "purchaseDate": "2024-10-10"
+},
+{
+  "_id": {
+    "$oid": "6752d86275425ccf7135c4d3"
+  },
+  "userId": {
+    "$oid": "673c88367671d725928cfebe"
+  },
+  "courseId": {
+    "$oid": "66fba9fefd644d47f4f135c6"
+  },
+  "purchaseDate": "2024-12-05"
+},
+{
+  "_id": {
+    "$oid": "6752f02875425ccf7135c4df"
+  },
+  "userId": {
+    "$oid": "673c88367671d725928cfebe"
+  },
+  "courseId": {
+    "$oid": "66fba9fefd644d47f4f135c3"
+  },
+  "purchaseDate": "2023-12-05"
+}]

@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "67062bb70ea72e9d3558c89a"
+  },
+  "descShort": "Dussehra festival",
+  "descLong": "This dusshera get 50% offer by joining our course",
+  "image": "",
+  "startDate": {
+    "$date": "2024-10-09T18:30:00.000Z"
+  },
+  "endDate": {
+    "$date": "2024-10-31T18:30:00.000Z"
+  },
+  "isActive": 1
+},
+{
+  "_id": {
+    "$oid": "6706530e0ea72e9d3558c8aa"
+  },
+  "descShort": "Diwali festival",
+  "descLong": "This diwali get 20% offer by joining our course",
+  "image": "banner1.jpg",
+  "startDate": {
+    "$date": "2024-10-09T18:30:00.000Z"
+  },
+  "endDate": {
+    "$date": "2024-11-05T18:30:00.000Z"
+  },
+  "isActive": 1
+},
+{
+  "_id": {
+    "$oid": "670653450ea72e9d3558c8ac"
+  },
+  "descShort": "Exam Week",
+  "descLong": "This Exam weeks get connect with us and score higher and achieve your goal",
+  "image": "",
+  "startDate": {
+    "$date": "2024-10-09T18:30:00.000Z"
+  },
+  "endDate": {
+    "$date": "2024-11-15T18:30:00.000Z"
+  },
+  "isActive": 1
+},
+{
+  "_id": {
+    "$oid": "670653a10ea72e9d3558c8ae"
+  },
+  "descShort": "Bonus Offer",
+  "descLong": "Get offer upto 20% off on every course you purchase, simply buy the course and get some exciting rewards",
+  "image": "",
+  "startDate": {
+    "$date": "2024-10-10T18:30:00.000Z"
+  },
+  "endDate": {
+    "$date": "2024-11-05T18:30:00.000Z"
+  },
+  "isActive": 1
+}]
