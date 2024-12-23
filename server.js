@@ -12,6 +12,7 @@ const {
 const { getCourseList, getCoursePdfUrl, addFavouriteCourse, getFavouriteCourseList, getPaidCourseList } = require("./controller/courseController");
 const { connectDatabase } = require("./dbconfig");
 const { getNotice } = require("./controller/noticeController");
+const { getStatementByUserId, getStatementByCourseId, getAllStatementList, getStatementByJoin } = require("./controller/statementController");
 require("dotenv").config();
 
 var app = express();
@@ -249,6 +250,91 @@ app.get('/getfavcourse/:userId', getFavouriteCourseList);
 app.get('/getpaidcourse/:userId', getPaidCourseList);
 
 /**======================Get favourite course list by id=============================== */
+
+
+/**======================Get Statments by user id=============================== */
+/**
+ * @swagger
+ * /getstatement/{userId}:
+ *   get:
+ *     summary: Retrieve a statement  list by User ID from user favourite and purchased courseId
+ *     parameters:
+ *       - in: path
+ *         name: userId
+ *         required: true
+ *         description: User ID
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Statement list retrieved
+ */
+app.get('/getstatment/:userId', getStatementByUserId);
+
+/**======================Get statement list by user id=============================== */
+
+
+/**=============================Get statement list by courseId===================== */
+
+/**
+ * @swagger
+ * /getstatement/{courseId}:
+ *   get:
+ *     summary: Retrieve a statement  list by Course ID
+ *     parameters:
+ *       - in: path
+ *         name: courseId
+ *         required: true
+ *         description: User ID
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Statement list retrieved
+ */
+
+
+app.get('/getstatementbycourse/:courseId', getStatementByCourseId)
+
+
+/**=============================Get statement list by courseId===================== */
+
+
+/**===============================Get All Statement list============================ */
+
+/**
+ * @swagger
+ * /getstatements:
+ *   get:
+ *     summary: Retrieve all statement list 
+ *     
+ *     responses:
+ *       200:
+ *         description: Statement list retrieved
+ */
+
+  app.get('/getstatements', getAllStatementList);
+
+/**===============================Get All Statement list============================ */
+
+
+/**===========================Get Statements by join============================== */
+
+/**
+ * @swagger
+ * /statementslist:
+ *   get:
+ *     summary: Retrieve all statement list by join
+ *     
+ *     responses:
+ *       200:
+ *         description: Statement list retrieved
+ */
+
+app.get('/statementslist', getStatementByJoin);
+
+/**===========================Get Statements by join============================== */
+
 
 app.listen(process.env.appPort);
 console.log(`Server Started : http://127.0.0.1:${process.env.appPort || 8080}`);

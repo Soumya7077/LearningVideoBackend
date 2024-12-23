@@ -1,0 +1,338 @@
+[
+  {
+    "statement": "CSS was first proposed by Håkon Wium Lie in 1994 and became an official recommendation by the W3C in December 1996. Before CSS, styling was handled within HTML using attributes like <font> and <center>",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c2"
+    },
+    "imgUrl":"1.webp",
+    "status": 1
+  },
+  {
+    "statement": "You can create complex animations using just CSS, thanks to the @keyframes rule and properties like transition and animation. Examples include hover effects, loading spinners, and even games like tic-tac-toe.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c2"
+    },
+    "imgUrl":"2.webp",
+    "status": 1
+  },
+  {
+    "statement": "CSS has grown significantly and now includes properties for layout, animations, typography, grids, filters, and more, making it one of the most powerful tools for web design.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c2"
+    },
+    "imgUrl":"3.webp",
+    "status": 1
+  },
+  {
+    "statement": "With the @media print rule, you can customize how a web page looks when printed, like removing unnecessary elements or adjusting font sizes.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c2"
+    },
+    "imgUrl":"4.jpg",
+    "status": 1
+  },
+  {
+    "statement": "CSS lets you blend elements and images using the mix-blend-mode and background-blend-mode properties, enabling effects like overlays and creative compositions.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c2"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Talented designers have created entire illustrations and animations using just CSS. Websites like CSS Art showcase intricate designs made with CSS.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c2"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "The clip-path property allows you to create non-rectangular shapes, such as circles, polygons, and custom designs. It's often used for creative layouts and effects.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c2"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "CSS Grid, introduced in 2017, made complex layouts much simpler by providing a two-dimensional layout system. It complements Flexbox, which is ideal for one-dimensional layouts.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c2"
+    },
+    "imgUrl":"4.jpg",
+    "status": 1
+  },
+  {
+    "statement": "The Cascading in CSS refers to how styles are applied based on hierarchy, specificity, and inheritance. This gives developers control over how rules are applied.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c2"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Browsers like Chrome and Firefox include easter eggs in their CSS implementation. For instance, in Chrome DevTools, entering /*# sourceURL=foo.css */ or /*# sourceMappingURL=foo.map */ reveals fun surprises.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c2"
+    },
+    "imgUrl":"5.jpg",
+    "status": 1
+  },
+  {
+    "statement": "Houdini is a set of APIs that let developers write custom CSS through JavaScript, giving more control over how browsers render CSS.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c2"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Oracle was founded by Larry Ellison, Bob Miner, and Ed Oates in 1977. The company was originally named Software Development Laboratories (SDL) before being renamed Oracle in 1982.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c0"
+    },
+    "imgUrl":"6.jpg",
+    "status": 1
+  },
+  {
+    "statement": "Oracle created the first commercial relational database to use SQL (Structured Query Language), which is now a standard language for database management.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c0"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "In 2010, Oracle acquired Sun Microsystems, gaining control of key technologies like Java, MySQL, and the Solaris operating system.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c0"
+    },
+    "imgUrl":"7.jpg",
+    "status": 1
+  },
+  {
+    "statement": "The name Oracle comes from a CIA project on which the founders worked before starting the company. The project aimed to create a database capable of answering complex queries, much like an oracle in mythology.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c0"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Oracle has its cloud platform, Oracle Cloud Infrastructure (OCI), which competes with services like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c0"
+    },
+    "imgUrl":"8.jpg",
+    "status": 1
+  },
+  {
+    "statement": "Oracle operates in more than 175 countries and serves customers in a wide range of industries, from healthcare to banking and telecommunications.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c0"
+    },
+    "imgUrl":"9.png",
+    "status": 1
+  },
+  {
+    "statement": "Oracle has acquired over 140 companies, including notable ones like PeopleSoft, Siebel Systems, BEA Systems, and NetSuite. These acquisitions have expanded its portfolio to include enterprise software, CRM, and ERP solutions.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c0"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Oracle’s database management system has evolved significantly, from Oracle Database 2 (the first commercial version) to the latest Oracle 21c, which focuses on multi-model and autonomous database capabilities.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c0"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Oracle Database supports multiple data models, including relational, document, graph, key-value, and blockchain, making it versatile for modern applications.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c0"
+    },
+    "imgUrl":"10.jpg",
+    "status": 1
+  },
+  {
+    "statement": "Oracle has been involved in various sponsorships, including naming rights to the San Francisco Giants' baseball stadium, Oracle Park, and partnerships in Formula One with Red Bull Racing.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c0"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "JavaScript was created by Brendan Eich in May 1995 while working at Netscape. It took only 10 days to design and develop the initial version.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c6"
+    },
+    "imgUrl":"11.jpg",
+    "status": 1
+  },
+  {
+    "statement": "JavaScript was first named Mocha. It was later renamed LiveScript before finally being branded as JavaScript to ride on the popularity of Java at the time.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c6"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Despite the name, JavaScript and Java are not related. The naming was a marketing tactic by Netscape to associate JavaScript with the well-known Java programming language.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c6"
+    },
+    "imgUrl":"12.png",
+    "status": 1
+  },
+  {
+    "statement": "JavaScript is single-threaded but supports asynchronous programming through callbacks, promises, and async/await, enabling smooth performance even with time-consuming operations.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c6"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "JavaScript is natively supported by all major browsers, making it essential for creating interactive and user-friendly web experiences.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c6"
+    },
+    "imgUrl":"13.jpg",
+    "status": 1
+  },
+  {
+    "statement": "From SPAs (Single Page Applications) to PWAs (Progressive Web Apps), JavaScript powers the backbone of modern web applications.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c6"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "JavaScript continues to evolve with new features, such as optional chaining (?.), nullish coalescing (??), and modules, ensuring its relevance in the future.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c6"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Functions in JavaScript are first-class citizens, meaning they can be stored in variables, passed as arguments, and returned from other functions.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c6"
+    },
+    "imgUrl":"14.jpg",
+    "status": 1
+  },
+  {
+    "statement": "JavaScript introduced strict mode in ES5, enabling a stricter parsing and error-checking model to prevent common coding mistakes.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c6"
+    },
+    "imgUrl":"15.jpg",
+    "status": 1
+  },
+  {
+    "statement": "JavaScript uses a single-threaded model with an event loop to handle multiple tasks asynchronously, giving the illusion of concurrency.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c6"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Bootstrap was developed at Twitter in 2011 by Mark Otto and Jacob Thornton to create consistency across internal tools. It was originally called Twitter Blueprint.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c3"
+    },
+    "imgUrl":"16.jpeg",
+    "status": 1
+  },
+  {
+    "statement": "Bootstrap is completely open-source, which has contributed to its widespread adoption and continuous community-driven development.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c3"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Bootstrap provides a comprehensive library of pre-designed components, such as buttons, modals, alerts, navigation bars, and carousels, which can be easily customized.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c3"
+    },
+    "imgUrl":"17.jpg",
+    "status": 1
+  },
+  {
+    "statement": "Bootstrap is built with Sass, a CSS preprocessor, allowing developers to customize the framework by modifying variables like colors, typography, and spacing.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c3"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Bootstrap includes numerous JavaScript-based plugins, such as tooltips, dropdowns, and modals, which enhance interactivity without requiring external libraries.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c3"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Bootstrap integrates well with frameworks like React, Vue.js, and Angular, offering UI components as ready-to-use libraries.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c3"
+    },
+    "imgUrl":"18.png",
+    "status": 1
+  },
+  {
+    "statement": "Many large companies and organizations, including Spotify, Airbnb, and NASA, have used Bootstrap to develop their websites and applications.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c3"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Bootstrap’s 12-column grid system is one of its most iconic features, enabling developers to create complex layouts with ease.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c3"
+    },
+    "imgUrl":"19.jpeg",
+    "status": 1
+  },
+  {
+    "statement": "With millions of users worldwide, Bootstrap has a vast community offering forums, tutorials, and third-party tools for learning and troubleshooting.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c3"
+    },
+    "imgUrl":"",
+    "status": 1
+  },
+  {
+    "statement": "Bootstrap 5 added support for right-to-left (RTL) languages like Arabic and Hebrew, making it more inclusive for global audiences.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c3"
+    },
+    "imgUrl":"20.jpg",
+    "status": 1
+  },
+  {
+    "statement": "Bootstrap adheres to web accessibility standards, ensuring that websites are usable by people with disabilities, such as screen reader support and focus management.",
+    "courseId": {
+      "$oid": "66fba9fefd644d47f4f135c3"
+    },
+    "imgUrl":"",
+    "status": 1
+  } 
+]
