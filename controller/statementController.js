@@ -2,39 +2,34 @@ const courseModel = require("../model/courseModel");
 const statementMasterModel = require("../model/statementMasterModel");
 const userModel = require("../model/userModel");
 
-
-
-
 /**==============================Get All Statement list================================== */
 
-
-const getAllStatementList = async(req, res) => {
-  try{
+const getAllStatementList = async (req, res) => {
+  try {
     const statements = await statementMasterModel.find();
 
-    if(!statements){
-      res.status(400).json({message:"No statments found"});
+    if (!statements) {
+      res.status(400).json({ message: "No statments found" });
       return;
     }
 
-    res.status(200).json({statements});
-
-
-  }catch(err){
+    res.status(200).json({ statements });
+  } catch (err) {
     console.log(err);
     res.status(200).json(err);
   }
-}
-
+};
 
 /**==============================Get All Statement list================================== */
-
 
 /**=============================Get Statement list by login user id========================= */
 
 const getStatementByUserId = async (req, res) => {
   try {
     const { userId } = req.params;
+
+    const statements = await fetchStatements();
+    
 
     let loggedInUserCourse = [];
     const getUserCourse = await userModel.findById(userId.trim());
@@ -44,13 +39,39 @@ const getStatementByUserId = async (req, res) => {
 
     loggedInUserCourse.push(...getPurchasedCourse, ...getFavouriteCourseIds);
 
-    const statements = await Promise.all(
-      loggedInUserCourse.map((courseId) =>
-        statementMasterModel.find({ courseId: courseId })
-      )
-    );
+   
+    
 
-    const getStatements = statements.flat();
+    const orderStatements = loggedInUserCourse.map(item =>  statements.find(e => e._id == item)).flat();
+    
+    
+    
+    const remainingStatements = statements.filter(item => !loggedInUserCourse.includes(item._id.toString()));
+
+    const arrangedStatements  = orderStatements.concat(remainingStatements);
+
+    
+
+    res.status(200).json({
+      arrangedStatements,
+    });
+  } catch (err) {
+    console.error("Error fetching statements:", err);
+    res.status(500).json({ message: "Something went wrong" });
+  }
+};
+
+/**=============================Get Statement list by login user id========================= */
+
+/**================================Get Statement by Course Id ============================= */
+
+const getStatementByCourseId = async (req, res) => {
+  try {
+    const { courseId } = req.params;
+
+    const getStatements = await statementMasterModel.find({
+      courseId: courseId,
+    });
 
     res.status(200).json({
       getStatements,
@@ -61,59 +82,47 @@ const getStatementByUserId = async (req, res) => {
   }
 };
 
-/**=============================Get Statement list by login user id========================= */
-
-
 /**================================Get Statement by Course Id ============================= */
 
+/**==================================Get Statements by join=============================== */
 
-const getStatementByCourseId = async(req, res) => {
-  try{
-    const {courseId} = req.params;
+/**==================================Get Statements by join=============================== */
 
-    const getStatements = await statementMasterModel.find({courseId: courseId});
-
-    res.status(200).json({
-      getStatements
-    })
-
-  }catch(err){
-    console.error("Error fetching statements:", err);
-    res.status(500).json({ message: "Something went wrong" });
-  }
-}
-
-
-
-/**================================Get Statement by Course Id ============================= */
-
-
-/**================================Get Statement by join course id========================== */
-
-
-const getStatementByJoin = async(req, res) => {
-    // const statements = await statementMasterModel.find().populate('courseId')
-    // res.send(statements);
-
+const fetchStatements = async () => {
+  try {
     const statements = await courseModel.aggregate([
       {
-        $lookup:{
+        $lookup: {
           from: "statementMaster",
-          localField:"_id",
-          foreignField:"courseId",
-          as:"statements"
-        }
+          localField: "_id",
+          foreignField: "courseId",
+          as: "statements",
+        },
       },
       {
         $match: {
-          "statements.0": { $exists: true } 
-        }
-      }
+          "statements.0": { $exists: true },
+        },
+      },
     ]);
-    
+    return statements;
+  } catch (err) {
+    console.error("Error fetching statements:", err);
+    throw new Error("Failed to fetch statements");
+  }
+};
 
-    res.send(statements);
-}
+/**================================Get Statement by join course id========================== */
+
+const getStatementByJoin = async (req, res) => {
+  try {
+    const statements = await fetchStatements();
+    res.status(200).json({ statements });
+  } catch (err) {
+    console.error("Error fetching statements:", err);
+    res.status(500).json({ message: "Something went wrong" });
+  }
+};
 
 /**================================Get Statement by join course id========================== */
 
@@ -121,5 +130,5 @@ module.exports = {
   getStatementByUserId,
   getStatementByCourseId,
   getAllStatementList,
-  getStatementByJoin
+  getStatementByJoin,
 };

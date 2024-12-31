@@ -13,6 +13,7 @@ const { getCourseList, getCoursePdfUrl, addFavouriteCourse, getFavouriteCourseLi
 const { connectDatabase } = require("./dbconfig");
 const { getNotice } = require("./controller/noticeController");
 const { getStatementByUserId, getStatementByCourseId, getAllStatementList, getStatementByJoin } = require("./controller/statementController");
+const { getAppDetails } = require("./controller/appDetailsController");
 require("dotenv").config();
 
 var app = express();
@@ -332,6 +333,23 @@ app.get('/getstatementbycourse/:courseId', getStatementByCourseId)
  */
 
 app.get('/statementslist', getStatementByJoin);
+
+/**===========================Get Statements by join============================== */
+
+/**===========================Get Statements by join============================== */
+
+/**
+ * @swagger
+ * /getappdetails:
+ *   get:
+ *     summary: Retrieve all app related details
+ *     
+ *     responses:
+ *       200:
+ *         description: App related details retrieved
+ */
+
+app.get('/getappdetails', getAppDetails);
 
 /**===========================Get Statements by join============================== */
 
