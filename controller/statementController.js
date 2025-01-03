@@ -29,7 +29,6 @@ const getStatementByUserId = async (req, res) => {
     const { userId } = req.params;
 
     const statements = await fetchStatements();
-    
 
     let loggedInUserCourse = [];
     const getUserCourse = await userModel.findById(userId.trim());
@@ -37,20 +36,23 @@ const getStatementByUserId = async (req, res) => {
     const getPurchasedCourse = getUserCourse.courseIds;
     const getFavouriteCourseIds = getUserCourse.favouriteCourseIds;
 
-    loggedInUserCourse.push(...getPurchasedCourse, ...getFavouriteCourseIds);
+    if (getPurchasedCourse && getFavouriteCourseIds) {
+      loggedInUserCourse.push(...getPurchasedCourse, ...getFavouriteCourseIds);
+    } else if (getPurchasedCourse) {
+      loggedInUserCourse.push(...getPurchasedCourse);
+    } else {
+      loggedInUserCourse.push(...getFavouriteCourseIds);
+    }
 
-   
-    
+    const orderStatements = loggedInUserCourse
+      .map((item) => statements.filter((e) => e._id == item))
+      .flat();
 
-    const orderStatements = loggedInUserCourse.map(item =>  statements.find(e => e._id == item)).flat();
-    
-    
-    
-    const remainingStatements = statements.filter(item => !loggedInUserCourse.includes(item._id.toString()));
+    const remainingStatements = statements.filter(
+      (item) => !loggedInUserCourse.includes(item._id.toString())
+    );
 
-    const arrangedStatements  = orderStatements.concat(remainingStatements);
-
-    
+    const arrangedStatements = orderStatements.concat(remainingStatements);
 
     res.status(200).json({
       arrangedStatements,
