@@ -14,6 +14,7 @@ const { connectDatabase } = require("./dbconfig");
 const { getNotice } = require("./controller/noticeController");
 const { getStatementByUserId, getStatementByCourseId, getAllStatementList, getStatementByJoin } = require("./controller/statementController");
 const { getAppDetails } = require("./controller/appDetailsController");
+const { addQuestionAnswer, getQuestionAnswer, getQuestionAnswerByCourseId, getCourse, submitAssessment } = require("./controller/questionAnswerController");
 require("dotenv").config();
 
 var app = express();
@@ -352,6 +353,75 @@ app.get('/statementslist', getStatementByJoin);
 app.get('/getappdetails', getAppDetails);
 
 /**===========================Get Statements by join============================== */
+
+/**===========================Post all question answer data============================== */
+
+/**
+ * @swagger
+ * /addquestionans:
+ *   get:
+ *     summary: Add question and answer with options
+ *     
+ *     responses:
+ *       200:
+ *         description: Add new question and answer successfully
+ */
+
+app.post('/addquestionans', addQuestionAnswer);
+
+/**===========================Post Question answer data============================== */
+
+/**===========================Get all question answer data============================== */
+
+/**
+ * @swagger
+ * /Get All:
+ *   get:
+ *     summary: Add question and answer with options
+ *     
+ *     responses:
+ *       200:
+ *         description: Add new question and answer successfully
+ */
+
+app.get('/getquestionansbycourse/:courseId', getQuestionAnswerByCourseId);
+
+/**===========================Get all question answer data============================== */
+
+/**===========================Get all course from question answer data============================== */
+
+/**
+ * @swagger
+ * /Get All:
+ *   get:
+ *     summary: Add question and answer with options
+ *     
+ *     responses:
+ *       200:
+ *         description: Add new question and answer successfully
+ */
+
+app.get('/getcoursefromquestionans', getCourse);
+
+/**===========================Get all question answer data============================== */
+
+
+/**===========================Submit assessment by all related data============================== */
+
+/**
+ * @swagger
+ * /Post All:
+ *   posr:
+ *     summary: Submit assessment by all related data
+ *     
+ *     responses:
+ *       200:
+ *         description: Add a new assessment when the valid logged in user take the assessment
+ */
+
+app.post('/submitassessment', submitAssessment);
+
+/**===========================Submit assessment by all related data============================== */
 
 
 app.listen(process.env.appPort);
