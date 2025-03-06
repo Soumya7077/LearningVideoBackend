@@ -119,13 +119,25 @@ const submitAssessment = async (req, res) => {
       optionAttendByUser,
       courseId,
       assessmentType,
+      totalScore
     } = req.body;
+
+    const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+    const course= await courseModel.findById(courseId);
+    const courseName = course.courseName;
+    const currentData = new Date();
+    const monthName = month[currentData.getMonth()];
+    const noOfQuestion = optionAttendByUser.length;
+    const assessmentName = `${currentData.getDate()}${monthName}${currentData.getFullYear()}_${courseName}_${noOfQuestion}`;
 
     const newAssessment = new assessmentModel({
       userId: new mongoose.Types.ObjectId(userId),
       optionAttendByUser: optionAttendByUser,
       courseId: new mongoose.Types.ObjectId(courseId),
       assessmentType: assessmentType,
+      totalScore:totalScore,
+      assessmentName: assessmentName,
     });
 
     const saveAssessment = await newAssessment.save();
@@ -142,10 +154,51 @@ const submitAssessment = async (req, res) => {
 
 /**===========================================Post question answer with all related data======================= */
 
+
+
+/**============================================Get Assessment based on User id================================ */
+
+  const getAssessmentByUserId = async (req, res) => {
+    try {
+      const { userId } = req.params;
+      const limit = parseInt(req.query.limit) || 5;
+      const page = parseInt(req.query.page) || 1;
+  
+      const assessment = await assessmentModel
+        .find({
+          userId: userId,
+          assessmentType:"assessment"
+        })
+        .skip(page - 1)
+        .limit(limit)
+        .exec();
+  
+      const totalDocuments = await assessmentModel.countDocuments({
+        userId: userId,
+      });
+  
+      res.status(200).json({
+        page,
+        limit,
+        totalDocuments,
+        totalPages: Math.ceil(totalDocuments / limit),
+        assessment,
+      });
+    } catch (err) {
+      console.error("Error fetching assessment:", err);
+      res.status(500).json({ message: "Something went wrong" });
+    }
+  };
+
+
+/**============================================Get Assessment based on User id================================ */
+
+
 module.exports = {
   addQuestionAnswer,
   getQuestionAnswer,
   getQuestionAnswerByCourseId,
   getCourse,
-  submitAssessment
+  submitAssessment,
+  getAssessmentByUserId
 };

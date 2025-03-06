@@ -12,6 +12,9 @@ const assessmentSchema = new mongoose.Schema(
     },
     optionAttendByUser: { type: Array, required: true },
     assessmentType: { type: String, required: true },
+    totalScore:{type:Number,required:true},
+    assessmentName: { type: String, required: true },
+    assessmentDate: { type: Date, default: Date.now },
   },
   { collection: "assessments" }
 );

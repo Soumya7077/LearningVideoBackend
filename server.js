@@ -14,7 +14,7 @@ const { connectDatabase } = require("./dbconfig");
 const { getNotice } = require("./controller/noticeController");
 const { getStatementByUserId, getStatementByCourseId, getAllStatementList, getStatementByJoin } = require("./controller/statementController");
 const { getAppDetails } = require("./controller/appDetailsController");
-const { addQuestionAnswer, getQuestionAnswer, getQuestionAnswerByCourseId, getCourse, submitAssessment } = require("./controller/questionAnswerController");
+const { addQuestionAnswer, getQuestionAnswer, getQuestionAnswerByCourseId, getCourse, submitAssessment, getAssessmentByUserId } = require("./controller/questionAnswerController");
 require("dotenv").config();
 
 var app = express();
@@ -411,7 +411,7 @@ app.get('/getcoursefromquestionans', getCourse);
 /**
  * @swagger
  * /Post All:
- *   posr:
+ *   post:
  *     summary: Submit assessment by all related data
  *     
  *     responses:
@@ -420,6 +420,24 @@ app.get('/getcoursefromquestionans', getCourse);
  */
 
 app.post('/submitassessment', submitAssessment);
+
+/**===========================Submit assessment by all related data============================== */
+
+
+/**===========================Submit assessment by all related data============================== */
+
+/**
+ * @swagger
+ * /Get By User Id:
+ *   get:
+ *     summary: Get attempt assessment by user id
+ *     
+ *     responses:
+ *       200:
+ *         description: Get all attempt assessment by user id
+ */
+
+app.get('/getassessment/:userId', getAssessmentByUserId);
 
 /**===========================Submit assessment by all related data============================== */
 
