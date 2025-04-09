@@ -9,12 +9,30 @@ const {
   updateUser,
   getUserById,
 } = require("./controller/userController");
-const { getCourseList, getCoursePdfUrl, addFavouriteCourse, getFavouriteCourseList, getPaidCourseList } = require("./controller/courseController");
+const {
+  getCourseList,
+  getCoursePdfUrl,
+  addFavouriteCourse,
+  getFavouriteCourseList,
+  getPaidCourseList,
+} = require("./controller/courseController");
 const { connectDatabase } = require("./dbconfig");
 const { getNotice } = require("./controller/noticeController");
-const { getStatementByUserId, getStatementByCourseId, getAllStatementList, getStatementByJoin } = require("./controller/statementController");
+const {
+  getStatementByUserId,
+  getStatementByCourseId,
+  getAllStatementList,
+  getStatementByJoin,
+} = require("./controller/statementController");
 const { getAppDetails } = require("./controller/appDetailsController");
-const { addQuestionAnswer, getQuestionAnswer, getQuestionAnswerByCourseId, getCourse, submitAssessment, getAssessmentByUserId } = require("./controller/questionAnswerController");
+const {
+  addQuestionAnswer,
+  getQuestionAnswer,
+  getQuestionAnswerByCourseId,
+  getCourse,
+  submitAssessment,
+  getAssessmentByUserId,
+} = require("./controller/questionAnswerController");
 require("dotenv").config();
 
 var app = express();
@@ -143,7 +161,7 @@ app.get("/noticelist", getNotice);
  *       200:
  *         description: PDF URL retrieved
  */
-app.get('/getcoursepdf/:id', getCoursePdfUrl);
+app.get("/getcoursepdf/:id", getCoursePdfUrl);
 
 /**===============================Get pdf of course=================== */
 
@@ -164,7 +182,7 @@ app.get('/getcoursepdf/:id', getCoursePdfUrl);
  *       200:
  *         description: User updated
  */
-app.put('/updateuser/:id', updateUser);
+app.put("/updateuser/:id", updateUser);
 
 /**=============================Update User============================ */
 
@@ -185,7 +203,7 @@ app.put('/updateuser/:id', updateUser);
  *       200:
  *         description: User retrieved
  */
-app.get('/getuser/:userId', getUserById);
+app.get("/getuser/:userId", getUserById);
 
 /**======================Get user by id=============================== */
 
@@ -206,7 +224,7 @@ app.get('/getuser/:userId', getUserById);
  *       200:
  *         description: Favourite course added
  */
-app.put('/updatefavcourse/:userId', addFavouriteCourse);
+app.put("/updatefavcourse/:userId", addFavouriteCourse);
 
 /**======================Add favourite course=============================== */
 
@@ -227,10 +245,9 @@ app.put('/updatefavcourse/:userId', addFavouriteCourse);
  *       200:
  *         description: Favourite course list retrieved
  */
-app.get('/getfavcourse/:userId', getFavouriteCourseList);
+app.get("/getfavcourse/:userId", getFavouriteCourseList);
 
 /**======================Get favourite course list by id=============================== */
-
 
 /**======================Get favourite course list by id=============================== */
 /**
@@ -249,10 +266,9 @@ app.get('/getfavcourse/:userId', getFavouriteCourseList);
  *       200:
  *         description: Paid course list retrieved
  */
-app.get('/getpaidcourse/:userId', getPaidCourseList);
+app.get("/getpaidcourse/:userId", getPaidCourseList);
 
 /**======================Get favourite course list by id=============================== */
-
 
 /**======================Get Statments by user id=============================== */
 /**
@@ -271,10 +287,9 @@ app.get('/getpaidcourse/:userId', getPaidCourseList);
  *       200:
  *         description: Statement list retrieved
  */
-app.get('/getstatment/:userId', getStatementByUserId);
+app.get("/getstatment/:userId", getStatementByUserId);
 
 /**======================Get statement list by user id=============================== */
-
 
 /**=============================Get statement list by courseId===================== */
 
@@ -295,12 +310,9 @@ app.get('/getstatment/:userId', getStatementByUserId);
  *         description: Statement list retrieved
  */
 
-
-app.get('/getstatementbycourse/:courseId', getStatementByCourseId)
-
+app.get("/getstatementbycourse/:courseId", getStatementByCourseId);
 
 /**=============================Get statement list by courseId===================== */
-
 
 /**===============================Get All Statement list============================ */
 
@@ -308,17 +320,16 @@ app.get('/getstatementbycourse/:courseId', getStatementByCourseId)
  * @swagger
  * /getstatements:
  *   get:
- *     summary: Retrieve all statement list 
- *     
+ *     summary: Retrieve all statement list
+ *
  *     responses:
  *       200:
  *         description: Statement list retrieved
  */
 
-  app.get('/getstatements', getAllStatementList);
+app.get("/getstatements", getAllStatementList);
 
 /**===============================Get All Statement list============================ */
-
 
 /**===========================Get Statements by join============================== */
 
@@ -327,13 +338,13 @@ app.get('/getstatementbycourse/:courseId', getStatementByCourseId)
  * /statementslist:
  *   get:
  *     summary: Retrieve all statement list by join
- *     
+ *
  *     responses:
  *       200:
  *         description: Statement list retrieved
  */
 
-app.get('/statementslist', getStatementByJoin);
+app.get("/statementslist", getStatementByJoin);
 
 /**===========================Get Statements by join============================== */
 
@@ -344,13 +355,13 @@ app.get('/statementslist', getStatementByJoin);
  * /getappdetails:
  *   get:
  *     summary: Retrieve all app related details
- *     
+ *
  *     responses:
  *       200:
  *         description: App related details retrieved
  */
 
-app.get('/getappdetails', getAppDetails);
+app.get("/getappdetails", getAppDetails);
 
 /**===========================Get Statements by join============================== */
 
@@ -361,13 +372,13 @@ app.get('/getappdetails', getAppDetails);
  * /addquestionans:
  *   get:
  *     summary: Add question and answer with options
- *     
+ *
  *     responses:
  *       200:
  *         description: Add new question and answer successfully
  */
 
-app.post('/addquestionans', addQuestionAnswer);
+app.post("/addquestionans", addQuestionAnswer);
 
 /**===========================Post Question answer data============================== */
 
@@ -378,13 +389,13 @@ app.post('/addquestionans', addQuestionAnswer);
  * /Get All:
  *   get:
  *     summary: Add question and answer with options
- *     
+ *
  *     responses:
  *       200:
  *         description: Add new question and answer successfully
  */
 
-app.get('/getquestionansbycourse/:courseId', getQuestionAnswerByCourseId);
+app.get("/getquestionansbycourse/:courseId", getQuestionAnswerByCourseId);
 
 /**===========================Get all question answer data============================== */
 
@@ -395,16 +406,15 @@ app.get('/getquestionansbycourse/:courseId', getQuestionAnswerByCourseId);
  * /Get All:
  *   get:
  *     summary: Add question and answer with options
- *     
+ *
  *     responses:
  *       200:
  *         description: Add new question and answer successfully
  */
 
-app.get('/getcoursefromquestionans', getCourse);
+app.get("/getcoursefromquestionans", getCourse);
 
 /**===========================Get all question answer data============================== */
-
 
 /**===========================Submit assessment by all related data============================== */
 
@@ -413,16 +423,15 @@ app.get('/getcoursefromquestionans', getCourse);
  * /Post All:
  *   post:
  *     summary: Submit assessment by all related data
- *     
+ *
  *     responses:
  *       200:
  *         description: Add a new assessment when the valid logged in user take the assessment
  */
 
-app.post('/submitassessment', submitAssessment);
+app.post("/submitassessment", submitAssessment);
 
 /**===========================Submit assessment by all related data============================== */
-
 
 /**===========================Submit assessment by all related data============================== */
 
@@ -431,16 +440,15 @@ app.post('/submitassessment', submitAssessment);
  * /Get By User Id:
  *   get:
  *     summary: Get attempt assessment by user id
- *     
+ *
  *     responses:
  *       200:
  *         description: Get all attempt assessment by user id
  */
 
-app.get('/getassessment/:userId', getAssessmentByUserId);
+app.get("/getassessment/:userId", getAssessmentByUserId);
 
 /**===========================Submit assessment by all related data============================== */
-
 
 app.listen(process.env.appPort);
 console.log(`Server Started : http://127.0.0.1:${process.env.appPort || 8080}`);
