@@ -33,6 +33,7 @@ const {
   submitAssessment,
   getAssessmentByUserId,
 } = require("./controller/questionAnswerController");
+const { getAllChapters } = require("./controller/chapterController");
 require("dotenv").config();
 
 var app = express();
@@ -449,6 +450,8 @@ app.post("/submitassessment", submitAssessment);
 app.get("/getassessment/:userId", getAssessmentByUserId);
 
 /**===========================Submit assessment by all related data============================== */
+
+app.get("/getchapters/:id", getAllChapters);
 
 app.listen(process.env.appPort);
 console.log(`Server Started : http://127.0.0.1:${process.env.appPort || 8080}`);

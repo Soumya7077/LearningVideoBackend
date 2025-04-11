@@ -7,7 +7,7 @@ const userCourseModel = require("../model/userCourseModel");
 /**======================Get All Courses======================= */
 
 const getCourseList = async (req, res) => {
-  const { limit } = req.query;
+  const { limit } = req.query;  
   try {
     const courselist = await courseModel.find({}).limit(limit).exec();
     res.send(courselist);
