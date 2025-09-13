@@ -143,6 +143,27 @@ const getPaidCourseList = async (req, res) => {
 const addCourse = async (req, res) => {
   try{
 
+    const {categoryId, subCategoryId, courseName, courseDuration, courseType, courseDescription, courseImageUrl} = req.body;
+
+    const course = await courseModel.create({
+      categoryId,
+      subCategoryId,
+      courseName,
+      courseDuration,
+      courseType,
+      courseDescription,
+      courseImageUrl
+    })
+
+    if(course){
+      res.status(200).json({
+        status: true,
+        message: "Course added successfully",
+        data: course,
+      })
+    }
+
+
   }catch (error) {
     console.error("Error fetching paid courses:", error);
     res.status(500).send({ message: "Failed to fetch courses" });
@@ -156,4 +177,5 @@ module.exports = {
   addFavouriteCourse,
   getFavouriteCourseList,
   getPaidCourseList,
+  addCourse
 };

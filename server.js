@@ -15,6 +15,7 @@ const {
   addFavouriteCourse,
   getFavouriteCourseList,
   getPaidCourseList,
+  addCourse,
 } = require("./controller/courseController");
 const { connectDatabase } = require("./dbconfig");
 const { getNotice } = require("./controller/noticeController");
@@ -272,6 +273,8 @@ app.get("/getfavcourse/:userId", getFavouriteCourseList);
 app.get("/getpaidcourse/:userId", getPaidCourseList);
 
 /**======================Get favourite course list by id=============================== */
+
+app.post("/courses", addCourse)
 
 /**======================Get Statments by user id=============================== */
 /**
