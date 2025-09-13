@@ -8,6 +8,7 @@ const {
   registerUser,
   updateUser,
   getUserById,
+  adminLogin,
 } = require("./controller/userController");
 const {
   getCourseList,
@@ -34,7 +35,7 @@ const {
   submitAssessment,
   getAssessmentByUserId,
 } = require("./controller/questionAnswerController");
-const { getAllChapters } = require("./controller/chapterController");
+const { getAllChapters, createChapters } = require("./controller/chapterController");
 const { createCategories, getCategories, getCategoryById, updateCategoryById } = require("./controller/category.controller");
 const { createSubcategories, getSubcategoryById, updateSubcategoryById, getAllSubcategories, getSubcategoryByCategoryId } = require("./controller/subcategory.controller");
 require("dotenv").config();
@@ -491,6 +492,10 @@ app.get("/getassessment/:userId", getAssessmentByUserId);
 /**===========================Submit assessment by all related data============================== */
 
 app.get("/getchapters/:id", getAllChapters);
+app.post("/chapters", createChapters);
+
+app.post('/admin/login', adminLogin)
+
 
 app.listen(process.env.appPort);
 console.log(`Server Started : http://127.0.0.1:${process.env.appPort || 8000}`);

@@ -2,14 +2,14 @@ const mongoose = require("mongoose");
 
 const courseSchema = new mongoose.Schema(
   {
-    categoryId: { type: Number, required: true },
-    subcategoryId: { type: Number, required: true },
+    categoryId: { type: Object, required: true },
+    subcategoryId: { type: Object, required: true },
     courseName: { type: String, required: true },
-    videourl: { type: String, required: true },
+    videourl: { type: String, required: false },
     courseDesc: { type: String, required: true },
     isActive: { type: Number, required: true },
     courseImage: { type: String, required: true },
-    courseType: { type: String, required: true },
+    courseType: { type: Number, required: true },
     // courseExpiresOn: { type: String, required: true },
     courseDuration: { type: Number, required: true },
   },

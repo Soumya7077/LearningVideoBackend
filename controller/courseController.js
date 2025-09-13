@@ -143,16 +143,57 @@ const getPaidCourseList = async (req, res) => {
 const addCourse = async (req, res) => {
   try{
 
-    const {categoryId, subCategoryId, courseName, courseDuration, courseType, courseDescription, courseImageUrl} = req.body;
+    const {categoryId, subCategoryId, courseName, courseDuration, courseType, courseDescription, courseImage} = req.body;
+
+    // console.log(req.body);
 
     const course = await courseModel.create({
-      categoryId,
-      subCategoryId,
+      categoryId: new mongoose.Types.ObjectId(categoryId),
+      subcategoryId: new mongoose.Types.ObjectId(subCategoryId),
       courseName,
       courseDuration,
       courseType,
-      courseDescription,
-      courseImageUrl
+      courseDesc: courseDescription,
+      courseImage: courseImage,
+      isActive:1
+    })
+
+    if(course){
+      res.status(200).json({
+        status: true,
+        message: "Course added successfully",
+        data: course,
+      })
+    }
+
+
+  }catch (error) {
+    console.error("Error fetching paid courses:", error);
+    res.status(500).send({ message: "Failed to fetch courses" });
+  }
+}
+
+
+/*=============================Updare course========================= */
+
+
+const updateCourse = async (req, res) => {
+  try{
+
+    const { id } = req.params;
+    const {categoryId, subCategoryId, courseName, courseDuration, courseType, courseDescription, courseImage} = req.body;
+
+    // console.log(req.body);
+
+    const course = await courseModel.updateOne({_id: id},{
+      categoryId: new mongoose.Types.ObjectId(categoryId),
+      subcategoryId: new mongoose.Types.ObjectId(subCategoryId),
+      courseName,
+      courseDuration,
+      courseType,
+      courseDesc: courseDescription,
+      courseImage: courseImage,
+      isActive:1
     })
 
     if(course){
@@ -177,5 +218,6 @@ module.exports = {
   addFavouriteCourse,
   getFavouriteCourseList,
   getPaidCourseList,
-  addCourse
+  addCourse,
+  updateCourse
 };

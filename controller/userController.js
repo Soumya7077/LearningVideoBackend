@@ -173,7 +173,38 @@ const storeLoggedInUserData = async(userId) => {
 
 }
 
+const adminLogin = async(req, res) => {
+  const {email, password} = req.body;
+
+  // console.log(email)
+
+  try{
+    const adminEmail = await userModel.findOne({
+      email: email.trim(),
+    });
+
+    // console.log(adminEmail)
+    
+
+    if(adminEmail){
+      if(adminEmail.email !== "admin@parichaya.com"){
+        return res.status(200).json({message: "You are not authorized to login"})
+      }
+      if(adminEmail.password === password.trim()){
+        res.status(200).json({message: "Admin Logged in successfully", data: adminEmail})
+      }else{
+        res.status(200).json({message: "Invalid Password"})
+      }
+    }else{
+      res.status(200).json({message: "Admin does not exist"})
+    }
+
+  }catch(err){
+    console.log(err)
+  }
+}
+
 
 /**======================================Store Logged In User Data =================== */
 
-module.exports = { getUser, validateLogin, registerUser, updateUser, getUserById };
+module.exports = { getUser, validateLogin, registerUser, updateUser, getUserById,adminLogin };
