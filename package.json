@@ -7,6 +7,7 @@
     "jquery": "^3.7.1",
     "mongodb": "^6.9.0",
     "mongoose": "^8.6.3",
+    "nodemon": "^3.1.10",
     "reflect-metadata": "^0.2.2",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"

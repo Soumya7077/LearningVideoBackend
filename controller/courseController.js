@@ -136,6 +136,20 @@ const getPaidCourseList = async (req, res) => {
 
 /**=============================Get paid course list ============= */
 
+
+/*=============================Add course========================= */
+
+
+const addCourse = async (req, res) => {
+  try{
+
+  }catch (error) {
+    console.error("Error fetching paid courses:", error);
+    res.status(500).send({ message: "Failed to fetch courses" });
+  }
+}
+
+
 module.exports = {
   getCoursePdfUrl,
   getCourseList,

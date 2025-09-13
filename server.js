@@ -34,6 +34,8 @@ const {
   getAssessmentByUserId,
 } = require("./controller/questionAnswerController");
 const { getAllChapters } = require("./controller/chapterController");
+const { createCategories, getCategories, getCategoryById, updateCategoryById } = require("./controller/category.controller");
+const { createSubcategories, getSubcategoryById, updateSubcategoryById, getAllSubcategories, getSubcategoryByCategoryId } = require("./controller/subcategory.controller");
 require("dotenv").config();
 
 var app = express();
@@ -434,6 +436,40 @@ app.post("/submitassessment", submitAssessment);
 
 /**===========================Submit assessment by all related data============================== */
 
+/**===========================Create Category for course============================== */
+
+/**
+ * @swagger
+ * /Post All:
+ *   post:
+ *     summary: create category for course
+ *
+ *     responses:
+ *       200:
+ *         description: Add a new category 
+ */
+
+app.post("/categories/add", createCategories);
+
+/**===========================Submit assessment by all related data============================== */
+
+app.get("/categories", getCategories);
+
+app.get("/categories/:id", getCategoryById);
+
+app.put("/categories/:id", updateCategoryById);
+
+app.get("/subcategories", getAllSubcategories);
+
+
+app.post("/subcategories", createSubcategories);
+
+app.get("/subcategories/:id", getSubcategoryById);
+
+app.put("/subcategories/:id", updateSubcategoryById);
+app.get("/subcategoryByCategory/:categoryId", getSubcategoryByCategoryId);
+
+
 /**===========================Submit assessment by all related data============================== */
 
 /**
@@ -454,4 +490,4 @@ app.get("/getassessment/:userId", getAssessmentByUserId);
 app.get("/getchapters/:id", getAllChapters);
 
 app.listen(process.env.appPort);
-console.log(`Server Started : http://127.0.0.1:${process.env.appPort || 8080}`);
+console.log(`Server Started : http://127.0.0.1:${process.env.appPort || 8000}`);
